@@ -140,5 +140,11 @@ describe 'haml'
       end
     end
     
+    describe '<literal></html>'
+      it 'should remain intact'
+        assert('html')
+      end
+    end
+    
   end
 end
