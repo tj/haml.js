@@ -33,7 +33,7 @@
 ## Usage
 
     var haml = require('haml')
-    haml.render('a string of haml', options)
+    haml.render('a string of haml', { a: 'hash', of: 'options' })
     
 ## Options
 
