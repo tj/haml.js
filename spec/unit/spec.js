@@ -8,8 +8,8 @@ describe 'haml'
   
   describe '.render()'
     before
-      assert = function(name) {
-        var html = haml.render(fixture(name + '.haml')).trim(),
+      assert = function(name, options) {
+        var html = haml.render(fixture(name + '.haml'), options).trim(),
             expected = fixture(name + '.html').trim()
         if (html === expected)
           pass()
@@ -142,7 +142,7 @@ describe 'haml'
     
     describe '- each'
       it 'should iterate'
-        assert('code.each')
+        assert('code.each', { locals: { items: ['one', 'two', 'three'] }})
       end
     end
     
