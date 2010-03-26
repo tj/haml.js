@@ -23,12 +23,14 @@
           %li= items[i]
   
   Iteration is the one exception to these magical plugins,
-  since this is fairly ugly in JavaScript, you may also:
+  since this is **ugly** in JavaScript, you may also:
   
     - if (items)
       %ul
         - each item in items
           %li= item
+          
+## Usage
           
 ## License 
 
