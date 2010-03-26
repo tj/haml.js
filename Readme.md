@@ -1,13 +1,20 @@
 
-# YourLib
+# Haml.js
 
-Description
+  High performance JavaScript [Haml](http://haml-lang.com) implementation for [nodejs](http://nodejs.org)
+  
+## Installation
+
+  Install the [Kiwi package manager for nodejs](http://github.com/visionmedia/kiwi)
+  and run:
+  
+      $ kiwi -v install haml
 
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2009 Your Name &lt;Your Email&gt;
+Copyright (c) 2010 TJ Holowaychuk &lt;tj@vision-media.ca&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
