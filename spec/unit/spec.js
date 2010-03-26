@@ -48,6 +48,10 @@ describe 'haml'
       it 'should be mapped as html attributes'
         assert('tag.attrs')
       end
+      
+      it 'should escape values'
+        assert('tag.attrs.escape')
+      end
     end
     
     describe 'nesting'
