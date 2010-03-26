@@ -11,10 +11,17 @@ describe 'haml'
       assert = function(name) {
         var html = haml.render(fixture(name + '.haml')).trim(),
             expected = fixture(name + '.html').trim()
-        if (html !== expected) {
+        if (html === expected)
+          pass()
+        else
           fail(name + '.haml does not match ' + name + '.html\ngot:\n' + html + '\n\nexpected:\n' + expected)
-        }
       }
+    end
+    
+    describe 'tags'
+      it 'should work with no text or block'
+        assert('tag.simple')
+      end
     end
     
     describe 'nesting'
