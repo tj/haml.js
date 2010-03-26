@@ -166,5 +166,19 @@ describe 'haml'
       end
     end
     
+    describe '/'
+      it 'should comment out tags'
+        assert('comment.tag')
+      end
+      
+      it 'should comment out blocks'
+        assert('comment.block')
+      end
+      
+      it 'should comment out text'
+        assert('comment.text')
+      end
+    end
+    
   end
 end
