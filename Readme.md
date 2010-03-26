@@ -23,12 +23,32 @@
           %li= items[i]
   
   Iteration is the one exception to these magical plugins,
-  since this is fairly ugly in JavaScript, you may also:
+  since this is **ugly** in JavaScript, you may also:
   
     - if (items)
       %ul
         - each item in items
           %li= item
+          
+## Usage
+
+    var haml = require('haml')
+    haml.render('a string of haml', { a: 'hash', of: 'options' })
+    
+## Options
+
+  * context
+    - when passed the value of "this" becomes the given "context" object
+  * locals
+    - when passed all members of this object become available to this template
+    
+## Tags
+
+    %div text
+
+html:
+
+    <div>text</div>
           
 ## License 
 

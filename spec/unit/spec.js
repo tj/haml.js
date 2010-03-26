@@ -8,14 +8,22 @@ describe 'haml'
   
   describe '.render()'
     before
-      assert = function(name) {
-        var html = haml.render(fixture(name + '.haml')).trim(),
+      assert = function(name, options) {
+        var html = haml.render(fixture(name + '.haml'), options).trim(),
             expected = fixture(name + '.html').trim()
         if (html === expected)
           pass()
         else
           fail('got:\n' + html + '\n\nexpected:\n' + expected)
       }
+    end
+    
+    it 'should allow passing of a context object'
+      assert('context', { context: 'yay' })
+    end
+    
+    it 'should allow passing of literals'
+      assert('literals', { locals: { user: 'tj' }})
     end
     
     it 'should not fail on trailing indents'
@@ -137,6 +145,16 @@ describe 'haml'
       
       it 'should work when nested'
         assert('code.nested')
+      end
+    end
+    
+    describe '- each'
+      it 'should iterate'
+        assert('code.each', { locals: { items: ['one', 'two', 'three'] }})
+      end
+      
+      it 'should iterate with index'
+        assert('code.each.index', { locals: { items: ['one', 'two', 'three'] }})
       end
     end
     
