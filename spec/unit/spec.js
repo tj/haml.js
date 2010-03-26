@@ -54,6 +54,22 @@ describe 'haml'
       end
     end
     
+    describe '!!!'
+      it 'should default the doctype to 1.0 transitional'
+        assert('doctype')
+      end
+    end
+    
+    describe '!!! NAME'
+      it 'should output a specific doctype'
+        assert('doctype.xml')
+      end
+      
+      it 'should be case-insensitive'
+        assert('doctype.xml.case')
+      end
+    end
+    
     describe 'nesting'
       it 'should work when nested downwards'
         assert('nesting.simple')
