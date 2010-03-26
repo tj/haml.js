@@ -70,7 +70,7 @@ describe 'haml'
       end
     end
     
-    describe '%tag='
+    describe '%tag!='
       it 'should output the evaluated code'
         assert('tag.code')
       end
@@ -80,7 +80,7 @@ describe 'haml'
       end
     end
     
-    describe '%tag&='
+    describe '%tag='
       it 'should escape the evaluated code'
         assert('tag.escape')
       end
