@@ -18,6 +18,10 @@ describe 'haml'
       }
     end
     
+    it 'should not fail on trailing indents'
+      assert('trailing-indent')
+    end
+    
     describe '.class'
       it 'should output a div with the given class'
         assert('class')
