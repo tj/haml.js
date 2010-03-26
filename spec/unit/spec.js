@@ -181,6 +181,12 @@ describe 'haml'
     end
     
     describe ':filter'
+      describe 'plain'
+        it 'should ignore haml specific characters'
+          assert('filter.plain')
+        end
+      end
+    
       describe 'cdata'
         it 'should wrap with CDATA tags'
           assert('filter.cdata')
