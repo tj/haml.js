@@ -14,17 +14,23 @@ describe 'haml'
         if (html === expected)
           pass()
         else
-          fail(name + '.haml does not match ' + name + '.html\ngot:\n' + html + '\n\nexpected:\n' + expected)
+          fail('got:\n' + html + '\n\nexpected:\n' + expected)
       }
     end
     
-    describe 'tags'
+    describe '%tag'
       it 'should work with no text or block'
         assert('tag.simple')
       end
       
       it 'should work with text'
         assert('tag.text')
+      end
+    end
+    
+    describe '%tag&='
+      it 'should escape the evaluated code'
+        assert('tag.escape')
       end
     end
     
