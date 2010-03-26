@@ -42,6 +42,10 @@ describe 'haml'
       it 'should work with text'
         assert('tag.text')
       end
+      
+      it 'should work with many classes / ids / attrs'
+        assert('tag.complex')
+      end
     end
     
     describe '%tag.class'
