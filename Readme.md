@@ -229,11 +229,11 @@ html:
 
     <head>
       <script type="javascript">
-      <![CDATA[
+      //<![CDATA[
       if (foo)
         if (bar)
           alert('baz')
-      ]]>
+      //]]>
       </script>
     </head>
     
