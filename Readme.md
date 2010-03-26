@@ -94,11 +94,19 @@ html:
     
 html:
 
-## Combining Attributes, Ids, and Classes
-
     <a href="http://google.com" title="Google It">Google</a>
     
-may also contain id and classes before or after:
+## Boolean Attributes
+
+    %input{ type: 'checkbox', checked: true }
+    
+html:
+
+    <input type="checkbox" checked="checked"/>
+    
+## Combining Attributes, Ids, and Classes
+    
+Wemay also contain id and classes before or after:
 
     %a.button{ href: 'http://google.com', title: 'Google It' }.first Google
     
@@ -135,7 +143,106 @@ To prevent escaping of HTML entities we can use _!=_:
 html:
 
     <br/>
-              
+    
+## Iteration
+
+    %ul
+      - each item in items
+        %li= item
+        
+html:
+
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+    
+If you require the key or index of the object
+or array during iteration simple append a comma
+following another id:
+
+    %ul
+      - each item, index in items
+        %li= item + '(' + index + ')'
+        
+html:
+
+    <ul>
+      <li>one(0)</li>
+      <li>two(1)</li>
+      <li>three(2)</li>
+    </ul>
+    
+## Doctypes
+
+Defaults to transitional:
+    
+    !!!
+    
+html:
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+Optionally pass a supported doctype name:
+
+    !!! strict
+    
+html:
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+currently supported doctypes, which can be
+extended simply by adding values to to _haml.doctypes_.
+
+    '5': '<!DOCTYPE html>',
+    'xml': '<?xml version="1.0" encoding="utf-8" ?>',
+    'default': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">',
+    'strict': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">',
+    'frameset': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">',
+    '1.1': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">',
+    'basic': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">',
+    'mobile': '<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">'
+
+
+## :cdata
+
+    %script
+      :cdata
+        foo
+        
+html:
+
+    <script><![CDATA[
+    foo
+    ]]></script>
+    
+## :javascript
+
+    %head
+      :javascript
+        if (foo)
+          if (bar)
+            alert('baz')
+      
+html:
+
+    <head>
+      <script type="javascript">
+      <![CDATA[
+      if (foo)
+        if (bar)
+          alert('baz')
+      ]]>
+      </script>
+    </head>
+    
+## More Information
+
+  * View _spec/fixtures_ for more examples
+  * Official [Haml](http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html) reference
+  * JavaScript [Sass](http://github.com/visionmedia/sass.js) implementation
+
 ## License 
 
 (The MIT License)
