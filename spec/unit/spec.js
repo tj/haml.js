@@ -18,6 +18,14 @@ describe 'haml'
       }
     end
     
+    it 'should allow passing of a context object'
+      assert('context', { context: 'yay' })
+    end
+    
+    it 'should allow passing of literals'
+      assert('literals', { locals: { user: 'tj' }})
+    end
+    
     it 'should not fail on trailing indents'
       assert('trailing-indent')
     end
