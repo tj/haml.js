@@ -49,7 +49,93 @@
 html:
 
     <div>text</div>
-          
+    
+## Classes
+
+    %div.article.first
+      article text here
+      and here
+      
+html:
+
+    <div class="article first">
+      article text here and here
+    </div>
+    
+## Div Class Shortcut
+
+    .comment hey
+    
+html:
+
+    <div class="comment">hey</div>
+    
+## Div Id Shortcut
+
+    #article-1 foo
+    
+html:
+
+    <div id="article-1">foo</div>
+    
+## Combining Ids and Classes
+
+You may chain id and classes in any order:
+
+    .article#first.summary content
+    
+html:
+
+    <div id="first" class="article summary">context</div>
+    
+## Attributes
+
+    %a{ href: 'http://google.com', title: 'Google It' } Google
+    
+html:
+
+## Combining Attributes, Ids, and Classes
+
+    <a href="http://google.com" title="Google It">Google</a>
+    
+may also contain id and classes before or after:
+
+    %a.button{ href: 'http://google.com', title: 'Google It' }.first Google
+    
+html:
+
+    <a href="http://google.com" title="Google It" class="button first">Google</a>
+    
+## Code
+
+Code starting with a hyphen will be executed but
+not buffered, where as code using the equals sign
+will be buffered:
+
+    - a = 1
+    - b = 2
+    = a + b
+    
+html:
+
+    3
+    
+HTML buffered with equals sign will **always** be escaped:
+
+    = "<br/>"
+    
+html:
+   
+    &lt;br/&gt;
+    
+To prevent escaping of HTML entities we can use _!=_:
+
+    != "<br/>"
+    
+html:
+
+    <br/>
+              
 ## License 
 
 (The MIT License)
