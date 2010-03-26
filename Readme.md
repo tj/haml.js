@@ -9,7 +9,27 @@
   and run:
   
       $ kiwi -v install haml
+      
+## About
 
+  Haml.js attempts to comply with the original [Haml](http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html)
+  implementation as well as possible. There are no magic "plugins" like
+  found in other JavaScript haml implementations, for example the following
+  will work just fine:
+  
+    - if (items)
+      %ul
+        - for (var i = 0; i < items.length; ++i)
+          %li= items[i]
+  
+  Iteration is the one exception to these magical plugins,
+  since this is fairly ugly in JavaScript, you may also:
+  
+    - if (items)
+      %ul
+        - each item in items
+          %li= item
+          
 ## License 
 
 (The MIT License)
