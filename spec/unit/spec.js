@@ -190,6 +190,12 @@ describe 'haml'
           assert('filter.cdata.whitespace')
         end
       end
+      
+      describe 'javascript'
+        it 'should wrap with <script> and CDATA tags'
+          assert('filter.javascript')
+        end
+      end
     end
     
   end
