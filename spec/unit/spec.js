@@ -90,6 +90,10 @@ describe 'haml'
       it 'should escape values'
         assert('tag.attrs.escape')
       end
+      
+      it 'should allow booleans'
+        assert('tag.attrs.bools')
+      end
     end
     
     describe '!!!'
