@@ -185,6 +185,10 @@ describe 'haml'
         it 'should wrap with CDATA tags'
           assert('filter.cdata')
         end
+        
+        it 'should retain whitespace'
+          assert('filter.cdata.whitespace')
+        end
       end
     end
     
