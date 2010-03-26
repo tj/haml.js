@@ -28,6 +28,16 @@ describe 'haml'
       end
     end
     
+    describe '%tag.class'
+      it 'should output tag with a class'
+        assert('tag.class')
+      end
+      
+      it 'should work with several classes'
+        assert('tag.classes')
+      end
+    end
+    
     describe '%tag='
       it 'should output the evaluated code'
         assert('tag.code')
