@@ -2,6 +2,8 @@
 var sys = require('sys'),
     fs = require('fs'),
     haml = require('../lib/haml'),
+    hamlJS = require('./haml-js/lib/haml'),
+    page = fs.readFileSync('benchmarks/page.haml')
     times = 2000
 
 function bm(label, fn) {
@@ -13,14 +15,17 @@ function bm(label, fn) {
 
 sys.puts(times + ' times')
 
-var ours = fs.readFileSync('benchmarks/ours.haml')
-
 bm('null', function(){
   var n = times
   while (n--) ;
 })
 
-bm('ours', function(){
+bm('haml.js', function(){
   var n = times
-  while (n--) haml.render(ours)
+  while (n--) haml.render(page)
+})
+
+bm('haml-js', function(){
+  var n = times
+  while (n--) hamlJS.render(page)
 })
