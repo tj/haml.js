@@ -180,5 +180,13 @@ describe 'haml'
       end
     end
     
+    describe ':filter'
+      describe 'cdata'
+        it 'should wrap with CDATA tags'
+          assert('filter.cdata')
+        end
+      end
+    end
+    
   end
 end
