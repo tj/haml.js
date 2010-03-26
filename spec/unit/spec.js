@@ -64,6 +64,10 @@ describe 'haml'
       it 'should work with several classes'
         assert('tag.classes')
       end
+      
+      it 'should support self-closing tags'
+        assert('tag.self-close')
+      end
     end
     
     describe '%tag='
