@@ -120,5 +120,17 @@ describe 'haml'
       end
     end
     
+    describe '= code'
+      it 'should output evaluation'
+        assert('code')
+      end
+    end
+    
+    describe '&= code'
+      it 'should output evaluation while escaping html entities'
+        assert('code.escape')
+      end
+    end
+    
   end
 end
