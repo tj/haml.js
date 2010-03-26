@@ -44,6 +44,12 @@ describe 'haml'
       end
     end
     
+    describe '{...}'
+      it 'should be mapped as html attributes'
+        assert('tag.attrs')
+      end
+    end
+    
     describe 'nesting'
       it 'should work when nested downwards'
         assert('nesting.simple')
