@@ -22,6 +22,10 @@ describe 'haml'
       it 'should work with no text or block'
         assert('tag.simple')
       end
+      
+      it 'should work with text'
+        assert('tag.text')
+      end
     end
     
     describe 'nesting'
