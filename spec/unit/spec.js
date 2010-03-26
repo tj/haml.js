@@ -104,6 +104,11 @@ describe 'haml'
       it 'should work when nested downwards'
         assert('nesting.simple')
       end
+      
+      it 'should work when blocks dedent'
+        assert('nesting.complex')
+      end
     end
+    
   end
 end
