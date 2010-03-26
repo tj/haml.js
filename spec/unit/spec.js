@@ -114,6 +114,10 @@ describe 'haml'
       it 'should work with if statements'
         assert('code.if')
       end
+      
+      it 'should work when nested'
+        assert('code.nested')
+      end
     end
     
   end
