@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title Welcome
+    %script{ src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js', type: 'javascript' }
+    :javascript
+      $(function(){
+        alert('yay!')
+      })
+  %body
+    %h1 Title
+    %ul
+      %li one
+      %li two
+      %ul
+        %li three
+        %li four
+      %li five
+    /
+      %ul
+        %li this
+        %li is
+        %li commented
+        %li out
