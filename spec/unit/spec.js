@@ -160,5 +160,11 @@ describe 'haml'
       end
     end
     
+    describe '-#'
+      it 'should become a silent comment'
+        assert('comment')
+      end
+    end
+    
   end
 end
