@@ -28,6 +28,16 @@ describe 'haml'
       end
     end
     
+    describe '%tag='
+      it 'should output the evaluated code'
+        assert('tag.code')
+      end
+      
+      it 'should not escape output'
+        assert('tag.code.no-escape')
+      end
+    end
+    
     describe '%tag&='
       it 'should escape the evaluated code'
         assert('tag.escape')
