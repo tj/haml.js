@@ -146,5 +146,11 @@ describe 'haml'
       end
     end
     
+    describe '\\char'
+      it 'should escape the character'
+        assert('escape')
+      end
+    end
+    
   end
 end
