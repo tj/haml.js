@@ -110,5 +110,11 @@ describe 'haml'
       end
     end
     
+    describe '- code'
+      it 'should work with if statements'
+        assert('code.if')
+      end
+    end
+    
   end
 end
