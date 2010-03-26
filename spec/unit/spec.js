@@ -140,6 +140,12 @@ describe 'haml'
       end
     end
     
+    describe '- each'
+      it 'should iterate'
+        assert('code.each')
+      end
+    end
+    
     describe '= code'
       it 'should output evaluation'
         assert('code')
