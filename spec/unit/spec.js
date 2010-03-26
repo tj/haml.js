@@ -182,6 +182,10 @@ describe 'haml'
       it 'should comment out text'
         assert('comment.text')
       end
+      
+      it 'should work in blocks'
+        assert('comment.text.complex')
+      end
     end
     
     describe ':filter'
