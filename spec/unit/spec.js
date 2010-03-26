@@ -43,6 +43,10 @@ describe 'haml'
         assert('tag.text')
       end
       
+      it 'should work with block text'
+        assert('tag.text.block')
+      end
+      
       it 'should work with many classes / ids / attrs'
         assert('tag.complex')
       end
