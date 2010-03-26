@@ -28,6 +28,12 @@ describe 'haml'
       end
     end
     
+    describe '#id'
+      it 'should output a div with the given id'
+        assert('id')
+      end
+    end
+    
     describe '%tag'
       it 'should work with no text or block'
         assert('tag.simple')
