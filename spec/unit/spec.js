@@ -18,6 +18,16 @@ describe 'haml'
       }
     end
     
+    describe '.class'
+      it 'should output a div with the given class'
+        assert('class')
+      end
+      
+      it 'should work with several classes'
+        assert('classes')
+      end
+    end
+    
     describe '%tag'
       it 'should work with no text or block'
         assert('tag.simple')
