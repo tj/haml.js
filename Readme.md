@@ -31,6 +31,16 @@
           %li= item
           
 ## Usage
+
+    var haml = require('haml')
+    haml.render('a string of haml', options)
+    
+## Options
+
+  * context
+    - when passed the value of "this" becomes the given "context" object
+  * locals
+    - when passed all members of this object become available to this template
           
 ## License 
 
