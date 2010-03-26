@@ -41,6 +41,14 @@
     - when passed the value of "this" becomes the given "context" object
   * locals
     - when passed all members of this object become available to this template
+    
+## Tags
+
+    %div text
+
+html:
+
+    <div>text</div>
           
 ## License 
 
