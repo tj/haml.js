@@ -144,6 +144,10 @@ describe 'haml'
       it 'should iterate'
         assert('code.each', { locals: { items: ['one', 'two', 'three'] }})
       end
+      
+      it 'should iterate with index'
+        assert('code.each.index', { locals: { items: ['one', 'two', 'three'] }})
+      end
     end
     
     describe '= code'
