@@ -1,4 +1,14 @@
 
+0.0.3 / 2010-03-29
+==================
+
+  * Added "filename" option support to aid in error reporting
+  * Added exports.compile() to create intermediate javascript
+  * Added `make benchmark`
+  * Changed; caching function templates to increase performance
+  * Fixed; ids and classes allowing underscores. Closes #5
+  * Fixed dedent issue when \n is not followed by whitespace. Closes #8
+
 0.0.2 / 2010-03-26
 ==================
 
