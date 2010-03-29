@@ -2,4 +2,7 @@
 test:
 	@node spec/node.js
 	
-.PHONY: test
+benchmark:
+	@node benchmarks/run.js
+	
+.PHONY: test benchmark
