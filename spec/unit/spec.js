@@ -30,6 +30,13 @@ describe 'haml'
       assert('trailing-indent')
     end
     
+    it 'should utilize "filename" option when an error is thrown'
+      try { assert('error', { filename: 'error.haml' }) }
+      catch (err) {
+        err.message.should.eql 'in error.haml foobar is not defined'
+      }
+    end
+    
     describe '.class'
       it 'should output a div with the given class'
         assert('class')
