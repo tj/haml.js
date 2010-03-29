@@ -1,4 +1,12 @@
-%ul#items
-  - each item in items
-    %li= item
-%p= "Total: " + items.length
+%html
+  %head
+    %title= title
+    %script{ src: '/public/javascripts/jquery.js' }
+    %script{ src: '/public/javascripts/app.js' }
+    %link{ rel: 'stylesheet', href: '/style.css' }
+  %body
+    #wrapper
+      != body
+      #usersOnline
+        Online:
+        = usersOnline
