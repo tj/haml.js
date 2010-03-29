@@ -66,6 +66,10 @@ describe 'haml'
       it 'should work with many classes / ids / attrs'
         assert('tag.complex')
       end
+      
+      it 'should allow empty tags'
+        assert('tag.empty')
+      end
     end
     
     describe '%tag.class'
