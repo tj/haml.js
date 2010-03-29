@@ -4,6 +4,7 @@ var sys = require('sys'),
     haml = require('../lib/haml')
     
 var options = {
+  filename: 'page.haml',
   locals: {
     title: 'Welcome',
     body: 'wahoo',
