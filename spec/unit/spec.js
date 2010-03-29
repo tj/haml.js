@@ -241,5 +241,11 @@ describe 'haml'
       end
     end
     
+    describe 'bug fixes'
+      it '#8 code block'
+        assert('issue.#8', { locals: { items: ['foo', 'bar', 'baz'] }})
+      end
+    end
+    
   end
 end
