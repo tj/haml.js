@@ -5,12 +5,6 @@
   * Added "cache" option, making haml.js over 90 times faster than haml-js
   * Improved textBlock whitespace replication
   * Fixed empty tags followed by class / ids on new lines. Closes #6
-    You can now do:
-       .foo
-       .bar
-       #baz
-         .foo
-         .etc
 
 0.0.4 / 2010-03-29
 ==================
