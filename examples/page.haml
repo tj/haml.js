@@ -1,11 +1,21 @@
 %html
   %head
-    %title= title
-    %script{ src: '/public/javascripts/jquery.js' }
-    %script{ src: '/public/javascripts/app.js' }
-    %link{ rel: 'stylesheet', href: '/style.css' }
+    %title Title
   %body
-    %div#wrapper
-      %p= doesNotExist
-      %p foo
-      %p bar
+  %h1 Welcome
+  %ul#menu
+    %li.first one
+    %li two
+    %li.last three
+    %li
+      %ul
+        %li nested
+  #content
+    .article
+      first
+      article
+      here
+    .article
+      second article
+      and content
+      here
