@@ -33,7 +33,7 @@ describe 'haml'
     it 'should utilize "filename" option when an error is thrown'
       try { assert('error', { filename: 'error.haml' }) }
       catch (err) {
-        err.message.should.eql 'in error.haml foobar is not defined'
+        err.message.should.eql '(error.haml):3 foobar is not defined'
       }
     end
     
