@@ -4,7 +4,7 @@ var sys = require('sys'),
     haml = require('../lib/haml'),
     hamlJS = require('./haml-js/lib/haml'),
     page = fs.readFileSync('benchmarks/page.haml')
-    times = 2000
+    times = 3000
 
 function bm(label, fn) {
   var start = +new Date
