@@ -33,7 +33,14 @@ describe 'haml'
     it 'should utilize "filename" option when an error is thrown'
       try { assert('error', { filename: 'error.haml' }) }
       catch (err) {
-        err.message.should.eql '(error.haml):3 foobar is not defined'
+        err.message.should.eql '(error.haml):3 invalid indentation; got 3, when previous was 1'
+      }
+    end
+    
+    it 'should default filename to "Haml" when an error is thrown'
+      try { assert('error') }
+      catch (err) {
+        err.message.should.eql '(Haml):3 invalid indentation; got 3, when previous was 1'
       }
     end
     
