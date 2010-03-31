@@ -20,6 +20,8 @@ bm('null', function(){
   while (n--) ;
 })
 
+sys.puts('')
+
 bm('haml.js', function(){
   var n = times
   while (n--) haml.render(page)
@@ -29,6 +31,8 @@ bm('haml.js cached', function(){
   var n = times
   while (n--) haml.render(page, { cache: true, filename: 'page.haml' })
 })
+
+sys.puts('')
 
 bm('haml-js', function(){
   var n = times
