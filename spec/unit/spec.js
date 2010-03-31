@@ -37,6 +37,15 @@ describe 'haml'
       }
     end
     
+    it 'should bitch when "cache" is true without a filename given'
+      -{ assert('tag.simple', { cache: true }) }.should.throw_error
+    end
+    
+    it 'should pre-compiled and cache when "cache" is true'
+      assert('tag.simple', { cache: true, filename: 'tag.simple.haml' })
+      assert('tag.simple', { cache: true, filename: 'tag.simple.haml' })
+    end
+    
     describe '.class'
       it 'should output a div with the given class'
         assert('class')

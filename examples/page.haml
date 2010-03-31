@@ -5,8 +5,7 @@
     %script{ src: '/public/javascripts/app.js' }
     %link{ rel: 'stylesheet', href: '/style.css' }
   %body
-    #wrapper
-      != doesNotExist
-      #usersOnline
-        Online:
-        = usersOnline
+    %div#wrapper
+      %p= doesNotExist
+      %p foo
+      %p bar

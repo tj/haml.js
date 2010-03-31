@@ -25,6 +25,11 @@ bm('haml.js', function(){
   while (n--) haml.render(page)
 })
 
+bm('haml.js cache', function(){
+  var n = times
+  while (n--) haml.render(page, { cache: true, filename: 'page.haml' })
+})
+
 bm('haml-js', function(){
   var n = times
   while (n--) hamlJS.render(page)
