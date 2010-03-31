@@ -1,14 +1,21 @@
-%p foo
-%p bar
-%p
-  one
-  two
-  three
-  %a link text
-  none link
-  text
-  %ul
+%html
+  %head
+    %title Title
+  %body
+  %h1 Welcome
+  %ul#menu
+    %li.first one
+    %li two
+    %li.last three
     %li
-      foo
-      bar
-    foo
+      %ul
+        %li nested
+  #content
+    .article
+      first
+      article
+      here
+    .article
+      second article
+      and content
+      here
