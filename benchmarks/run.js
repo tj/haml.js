@@ -25,7 +25,7 @@ bm('haml.js', function(){
   while (n--) haml.render(page)
 })
 
-bm('haml.js cache', function(){
+bm('haml.js cached', function(){
   var n = times
   while (n--) haml.render(page, { cache: true, filename: 'page.haml' })
 })
@@ -33,4 +33,18 @@ bm('haml.js cache', function(){
 bm('haml-js', function(){
   var n = times
   while (n--) hamlJS.render(page)
+})
+
+var js = hamlJS.compile(page)
+
+bm('haml-js cached', function(){
+  var n = times
+  while (n--) hamlJS.execute(js)
+})
+
+var js = hamlJS.optimize(hamlJS.compile(page))
+
+bm('haml-js cached / optimized', function(){
+  var n = times
+  while (n--) hamlJS.execute(js)
 })
