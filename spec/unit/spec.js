@@ -261,6 +261,10 @@ describe 'haml'
       it '#8 code block'
         assert('issue.#8', { locals: { items: ['foo', 'bar', 'baz'] }})
       end
+      
+      it '#10 Attributes should not need quotes'
+        assert('issue.#10')
+      end
     end
     
   end
