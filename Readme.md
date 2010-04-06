@@ -251,6 +251,23 @@ html:
       </script>
     </head>
     
+## Extending Haml
+
+### Adding Filters
+
+    var haml = require('haml')
+    haml.filters.my_filter = function(str) {
+      return doSomethingWith(str)
+    }
+
+by registering the filter function _my_filter_ we can now
+utilize it within our Haml templates as shown below:
+    %p
+      :my_filter
+        some text
+        here yay
+        whoop awesome
+    
 ## Running Benchmarks
 
 To run benchmarks against [haml-js](http://github.com/creationix/haml-js)
