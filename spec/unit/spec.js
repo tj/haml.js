@@ -233,6 +233,12 @@ describe 'haml'
       end
     end
     
+    describe '/[]'
+      it 'should insert conditional comment blocks'
+        assert('comment.block.conditional')
+      end
+    end
+
     describe ':filter'
       describe 'plain'
         it 'should ignore haml specific characters'
