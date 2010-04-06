@@ -267,6 +267,14 @@ utilize it within our Haml templates as shown below:
         some text
         here yay
         whoop awesome
+
+### Adding Doctypes
+
+    var haml = require('haml')
+    haml.doctypes.foo = '<!DOCTYPE ... >'
+    
+Will now allow you to:
+    !!! foo
     
 ## Running Benchmarks
 
