@@ -1,4 +1,13 @@
 
+0.2.0 / 2010-04-06
+==================
+
+  * Added conditional comment support [ciaranj]
+  * Fixed; Trimming input string before tokenization
+  * Fixed issue requiring quoting of "for" when used in attrs [aheckmann]
+  * Fixed; Exposing Haml compilation cache. Closes #12
+  * Fixed :javascript "type" attr, now "text/javascript" [aheckmann]
+
 0.1.0 / 2010-03-31
 ==================
 
