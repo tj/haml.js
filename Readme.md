@@ -109,6 +109,19 @@ html:
 html:
 
     <a href="http://google.com" title="Google It">Google</a>
+
+Attribute keys such as "for" are automatically quoted
+by haml.js, so instead of:
+
+    %label{ 'for': 'something' }
+
+you should:
+
+    %label{ for: 'something' }
+
+which will render:
+
+    <label for="something"></label>
     
 ## Boolean Attributes
 
