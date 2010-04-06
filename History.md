@@ -19,7 +19,7 @@
   * Added `make benchmark`
   * Changed; caching function templates to increase performance
   * Fixed; ids and classes allowing underscores. Closes #5
-  * Fixed dedent issue when \n is not followed by whitespace. Closes #8
+  * Fixed outdent issue when \n is not followed by whitespace. Closes #8
 
 0.0.2 / 2010-03-26
 ==================

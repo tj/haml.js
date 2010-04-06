@@ -160,7 +160,7 @@ describe 'haml'
         assert('nesting.simple')
       end
       
-      it 'should work when blocks dedent'
+      it 'should work when blocks outdent'
         assert('nesting.complex')
       end
     end
