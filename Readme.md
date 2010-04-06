@@ -13,8 +13,7 @@
 ## About
 
   Benchmarks rendering the same 21 line haml file located at _benchmarks/page.haml_,
-  shows that this library is nearly **400% faster**, when _cache_ is enabled, haml.js
-  is over *90 times* faster.
+  shows that this library is nearly **400% faster**.
   
     3000 times
     null: 0 seconds
@@ -52,6 +51,10 @@
     - when passed the value of "this" becomes the given "context" object
   * locals
     - when passed all members of this object become available to this template
+  * filename
+    - required when _cache_ is enabled
+  * cache
+    - compiled intermediate javascript is cached in memory keyed by _filename_
     
 ## Tags
 
