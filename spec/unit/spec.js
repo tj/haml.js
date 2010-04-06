@@ -235,7 +235,7 @@ describe 'haml'
     
     describe '/[]'
       it 'should insert conditional comment blocks'
-        assert('conditional.comment.block')
+        assert('comment.block.conditional')
       end
     end
 
