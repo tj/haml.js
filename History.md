@@ -1,4 +1,10 @@
 
+0.3.0 / 2010-04-16
+==================
+
+  * Added xml namespace support
+  * Added xml support
+
 0.2.0 / 2010-04-06
 ==================
 
