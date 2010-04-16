@@ -8,13 +8,19 @@ describe 'haml'
   
   describe '.render()'
     before
-      assert = function(name, options) {
+      assertAs = function(name, type, options) {
         var html = haml.render(fixture(name + '.haml'), options).trim(),
-            expected = fixture(name + '.html').trim()
+            expected = fixture(name + '.' + type).trim()
         if (html === expected)
           pass()
         else
           fail('got:\n' + html + '\n\nexpected:\n' + expected)
+      }
+      assert = function(name, options) {
+        assertAs(name, 'html', options)
+      }
+      assertXML = function(name, options) {
+        assertAs(name, 'xml', options)
       }
     end
     
@@ -28,6 +34,10 @@ describe 'haml'
     
     it 'should not fail on trailing indents'
       assert('trailing-indent')
+    end
+    
+    it 'should add xml support via the "xml" option'
+      assertXML('feed', { xml: true })
     end
     
     it 'should utilize "filename" option when an error is thrown'
