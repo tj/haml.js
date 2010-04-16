@@ -40,6 +40,10 @@ describe 'haml'
       assertXML('feed', { xml: true })
     end
     
+    it 'should support xml namespaces'
+      assertXML('namespace')
+    end
+    
     it 'should utilize "filename" option when an error is thrown'
       try { assert('error', { filename: 'error.haml' }) }
       catch (err) {
