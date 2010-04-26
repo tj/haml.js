@@ -139,6 +139,12 @@ describe 'haml'
       end
     end
     
+    describe '%namespace:tag'
+      it 'should output a tag with a namespace prefix'
+        assert('namespace.tag')
+      end
+    end
+    
     describe '{...}'
       it 'should be mapped as html attributes'
         assert('tag.attrs')
