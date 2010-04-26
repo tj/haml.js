@@ -1,4 +1,9 @@
 
+0.3.1 / 2010-04-26
+==================
+
+  * Fixed support for tags with hypens (both namespace / tag name, ex: "fb:login-button")
+
 0.3.0 / 2010-04-16
 ==================
 
