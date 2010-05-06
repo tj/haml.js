@@ -1,4 +1,10 @@
 
+0.4.0 / 2010-05-06
+==================
+
+  * Using Function constructor instead of eval()
+  * Performance enhanced by faster iteration implementation for "- each"
+
 0.3.1 / 2010-04-26
 ==================
 
