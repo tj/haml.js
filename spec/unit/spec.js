@@ -198,6 +198,7 @@ describe 'haml'
     describe '- each'
       it 'should iterate'
         assert('code.each', { locals: { items: ['one', 'two', 'three'] }})
+        assert('code.each.non-enumerable', { locals: { items: null }})
       end
       
       it 'should iterate with index'
