@@ -15,12 +15,15 @@
   Benchmarks rendering the same 21 line haml file located at _benchmarks/page.haml_,
   shows that this library is nearly **400% faster**.
   
-    3000 times
-    null: 0 seconds
-    haml.js: 1.449 seconds
-    haml.js cache: 0.055 seconds
-    haml-js: 5.022 seconds
-    
+     3000 times
+     null: 0 seconds
+     
+     haml.js: 1.767 seconds
+     haml.js cached: 0.028 seconds
+     
+     haml-js: 5.123 seconds
+     haml-js cached: 0.076 seconds
+     haml-js cached / optimized: 0.06 seconds
 
   Haml.js attempts to comply with the original [Haml](http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html)
   implementation as well as possible. There are no magic "plugins" like

@@ -1,4 +1,10 @@
 
+0.4.1 / 2010-05-17
+==================
+
+  * Fixed "- each" with non-enumerables, no longer throws exception
+  * Fixed array iteration
+
 0.4.0 / 2010-05-06
 ==================
 
