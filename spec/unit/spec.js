@@ -8,16 +8,23 @@ describe 'haml'
   
   describe '.render()'
     before
-      assertAs = function(name, type, options) {
-        var html = haml.render(fixture(name + '.haml'), options).trim(),
-            expected = fixture(name + '.' + type).trim()
-        if (html === expected)
-          pass()
-        else
-          fail('got:\n' + html + '\n\nexpected:\n' + expected)
+      assertAs = function(name, type, options, eol, neweol) {
+        var str = fixture(name + '.haml').replace(/\n/g, neweol)
+        try {
+            var html = haml.render(str, options).trim(),
+                expected = fixture(name + '.' + type).trim()
+            if (html === expected)
+              pass()
+            else
+              fail('line-ending: ' + eol + '\ngot:\n' + html + '\n\nexpected:\n' + expected)
+        } catch (err) {
+            fail('line-ending: ' + eol + '\n:' + err + '\n')
+        }
       }
       assert = function(name, options) {
-        assertAs(name, 'html', options)
+        assertAs(name, 'html', options, 'LF', '\n')
+        assertAs(name, 'html', options, 'CR', '\r')
+        assertAs(name, 'html', options, 'CRLF', '\r\n')
       }
       assertXML = function(name, options) {
         assertAs(name, 'xml', options)
@@ -65,16 +72,6 @@ describe 'haml'
     it 'should pre-compiled and cache when "cache" is true'
       assert('tag.simple', { cache: true, filename: 'tag.simple.haml' })
       assert('tag.simple', { cache: true, filename: 'tag.simple.haml' })
-    end
-    
-    describe 'line endings'
-      it 'should work with CR'
-        assert('cr')
-      end
-      
-      it 'should work with CRLF'
-        assert('crlf')
-      end
     end
     
     describe '.class'
