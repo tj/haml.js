@@ -1,4 +1,10 @@
 
+0.4.3 / 2010-05-25
+==================
+
+  * Fixed support for CRLF / CR line-endings, converted on input
+  * Exporting HamlError
+
 0.4.2 / 2010-05-25
 ==================
 
