@@ -11,14 +11,18 @@ describe 'haml'
       assertAs = function(name, type, options, eol, neweol) {
         var str = fixture(name + '.haml').replace(/\n/g, neweol)
         try {
-            var html = haml.render(str, options).trim(),
-                expected = fixture(name + '.' + type).trim()
-            if (html === expected)
-              pass()
-            else
-              fail('line-ending: ' + eol + '\ngot:\n' + html + '\n\nexpected:\n' + expected)
+          var html = haml.render(str, options).trim(),
+              expected = fixture(name + '.' + type).trim()
+          if (html === expected)
+            pass()
+          else
+            fail('line-ending: ' + eol + '\ngot:\n' + html + '\n\nexpected:\n' + expected)
         } catch (err) {
+          if (err instanceof haml.HamlError) {
+            throw err
+          } else {
             fail('line-ending: ' + eol + '\n:' + err.stack + '\n')
+          }
         }
       }
       assert = function(name, options) {
