@@ -31,7 +31,9 @@ describe 'haml'
         assertAs(name, 'html', options, 'CRLF', '\r\n')
       }
       assertXML = function(name, options) {
-        assertAs(name, 'xml', options)
+        assertAs(name, 'xml', options, 'LF', '\n')
+        assertAs(name, 'xml', options, 'CR', '\r')
+        assertAs(name, 'xml', options, 'CRLF', '\r\n')
       }
     end
     
