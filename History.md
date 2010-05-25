@@ -1,4 +1,11 @@
 
+0.4.2 / 2010-05-25
+==================
+
+  * Added HamlError
+  * Buffer newline indentation. Closes #23
+  * Benchmarks with node-bench
+
 0.4.1 / 2010-05-17
 ==================
 
