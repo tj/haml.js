@@ -18,7 +18,7 @@ describe 'haml'
             else
               fail('line-ending: ' + eol + '\ngot:\n' + html + '\n\nexpected:\n' + expected)
         } catch (err) {
-            fail('line-ending: ' + eol + '\n:' + err + '\n')
+            fail('line-ending: ' + eol + '\n:' + err.stack + '\n')
         }
       }
       assert = function(name, options) {
