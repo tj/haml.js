@@ -67,6 +67,16 @@ describe 'haml'
       assert('tag.simple', { cache: true, filename: 'tag.simple.haml' })
     end
     
+    describe 'line endings'
+      it 'should work with CR'
+        assert('cr')
+      end
+      
+      it 'should work with CRLF'
+        assert('crlf')
+      end
+    end
+    
     describe '.class'
       it 'should output a div with the given class'
         assert('class')
