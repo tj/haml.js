@@ -26,13 +26,9 @@ describe 'haml'
         }
       }
       assert = function(name, options) {
-        assertAs(name, 'html', options, 'LF', '\n')
-        assertAs(name, 'html', options, 'CR', '\r')
         assertAs(name, 'html', options, 'CRLF', '\r\n')
       }
       assertXML = function(name, options) {
-        assertAs(name, 'xml', options, 'LF', '\n')
-        assertAs(name, 'xml', options, 'CR', '\r')
         assertAs(name, 'xml', options, 'CRLF', '\r\n')
       }
     end
@@ -78,6 +74,10 @@ describe 'haml'
     it 'should pre-compiled and cache when "cache" is true'
       assert('tag.simple', { cache: true, filename: 'tag.simple.haml' })
       assert('tag.simple', { cache: true, filename: 'tag.simple.haml' })
+    end
+    
+    it 'should support blank lines'
+      assert('newlines')
     end
     
     describe '.class'
