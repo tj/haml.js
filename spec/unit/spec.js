@@ -8,20 +8,20 @@ describe 'haml'
   
   describe '.render()'
     before
-      assertAs = function(name, type, options, eol, neweol) {
-        var str = fixture(name + '.haml').replace(/\n/g, neweol)
+      assertAs = function(name, type, options) {
+        var str = fixture(name + '.haml')
         try {
           var html = haml.render(str, options).trim(),
               expected = fixture(name + '.' + type).trim()
           if (html === expected)
             pass()
           else
-            fail('line-ending: ' + eol + '\ngot:\n' + html + '\n\nexpected:\n' + expected)
+            fail('got:\n' + html + '\n\nexpected:\n' + expected)
         } catch (err) {
           if (err instanceof haml.HamlError) {
             throw err
           } else {
-            fail('line-ending: ' + eol + '\n:' + err.stack + '\n')
+            fail('\n:' + err.stack + '\n')
           }
         }
       }
