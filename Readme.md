@@ -10,9 +10,13 @@
   
       $ kiwi install haml
 
+      node> require('haml')
+
 Or npm:
 
       $ npm install hamljs
+
+      node> require('hamljs')
 
 ## About
 
