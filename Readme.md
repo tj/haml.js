@@ -8,8 +8,12 @@
   Install the [Kiwi package manager for nodejs](http://github.com/visionmedia/kiwi)
   and run:
   
-      $ kiwi -v install haml
-      
+      $ kiwi install haml
+
+Or npm:
+
+      $ npm install hamljs
+
 ## About
 
   Benchmarks rendering the same 21 line haml file located at _benchmarks/page.haml_,
