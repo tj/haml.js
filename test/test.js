@@ -23,6 +23,20 @@ describe('haml', function () {
     });
   });
 
+  describe('.renderFile()', function () {
+    it('should render the given file', function (done) {
+      haml.renderFile(__dirname + '/fixtures/class.haml', 'utf8', {}, function (err, html) {
+        html = html.trim()
+        var expected = fs.readFileSync(__dirname + '/fixtures/class.html').toString()
+
+        console.log(JSON.stringify(html), JSON.stringify(expected))
+        html.should.equal(expected)
+
+        done()
+      });
+    });
+  });
+
   describe('.render()', function () {
     var assertAs, assert, assertXML;
 
