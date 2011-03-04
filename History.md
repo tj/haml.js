@@ -1,4 +1,10 @@
 
+0.5.0 / 2011-03-04 
+==================
+
+  * Added `.compile()` for Express 2.0
+  * Fixed issue with to many newlines in output. Closes #24
+
 0.4.5 / 2010-06-04
 ==================
 
