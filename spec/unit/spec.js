@@ -5,7 +5,14 @@ describe 'haml'
       haml.version.should.match(/^\d+\.\d+\.\d+$/)
     end
   end
-  
+
+  describe '.compile()'
+    it 'should return a function'
+      var fn = haml.compile('%foo= bar');
+      fn({ bar: 'baz' }).should.equal '\n<foo>baz</foo>'
+    end
+  end
+
   describe '.render()'
     before
       assertAs = function(name, type, options) {

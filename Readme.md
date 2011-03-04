@@ -8,18 +8,15 @@
 
 ## Installation
 
-  Install the [Kiwi package manager for nodejs](http://github.com/visionmedia/kiwi)
-  and run:
-  
-      $ kiwi install haml
-
-      node> require('haml')
-
-Or npm:
-
       $ npm install hamljs
 
       node> require('hamljs')
+
+## Express
+
+ To use with [Express](http://expressjs.com) and the .haml extension, simply register the engine:
+ 
+     app.register('.haml', require('hamljs'));
 
 ## About
 
@@ -50,22 +47,6 @@ Or npm:
         - each item in items
           %li= item
           
-## Usage
-
-    var haml = require('haml')
-    haml.render('a string of haml', { a: 'hash', of: 'options' })
-    
-## Options
-
-  * context
-    - when passed the value of "this" becomes the given "context" object
-  * locals
-    - when passed all members of this object become available to this template
-  * filename
-    - required when _cache_ is enabled
-  * cache
-    - compiled intermediate javascript is cached in memory keyed by _filename_
-    
 ## Tags
 
     %div text
@@ -299,25 +280,11 @@ utilize it within our Haml templates as shown below:
 Will now allow you to:
     !!! foo
     
-## Running Benchmarks
-
-To run benchmarks against [haml-js](http://github.com/creationix/haml-js)
-simply execute:
-
-    $ git submodule update --init
-    $ node benchmarks/run.js
-    
-## More Information
-
-  * View _spec/fixtures_ for more examples
-  * Official [Haml](http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html) reference
-  * JavaScript [Sass](http://github.com/visionmedia/sass.js) implementation
-
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2010 TJ Holowaychuk &lt;tj@vision-media.ca&gt;
+Copyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
