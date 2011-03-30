@@ -13,6 +13,12 @@ describe 'haml'
     end
   end
 
+  describe 'Parser'
+    it 'should be available for extension'
+      haml.Parser.should.not.be_undefined
+    end
+  end
+
   describe '.render()'
     before
       assertAs = function(name, type, options) {
