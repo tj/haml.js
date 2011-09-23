@@ -89,8 +89,14 @@ describe('haml', function () {
       assert('tag.simple', { cache: true, filename: 'tag.simple.haml' });
     });
 
-    it('should support blank lines', function () {
-      assert('newlines');
+    describe('\\n', function () {
+      it('should support blank lines', function () {
+        assert('newlines');
+      });
+
+      it('should support blank lines within tags', function () {
+        assert('newlines.within-tags');
+      });
     });
 
     describe('.class', function () {
