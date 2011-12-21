@@ -1,1 +1,1 @@
-lib/haml.js
+module.exports = require('./lib/haml.js')
