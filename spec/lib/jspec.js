@@ -1752,7 +1752,7 @@
   if (typeof GLOBAL === 'object' && typeof exports === 'object') {
     var fs = require('fs')
     quit = process.exit
-    print = require('sys').puts
+    print = require('util').puts
     readFile = function(file){
       return fs.readFileSync(file).toString('utf8')
     }
