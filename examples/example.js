@@ -1,5 +1,5 @@
 
-var sys = require('sys'),
+var util = require('util'),
     fs = require('fs'),
     haml = require('../lib/haml')
     
@@ -12,4 +12,4 @@ var options = {
   }
 }
 
-sys.puts(haml.render(fs.readFileSync('examples/page.haml'), options))
+util.puts(haml.render(fs.readFileSync('examples/page.haml'), options))
