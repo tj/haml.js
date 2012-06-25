@@ -1,4 +1,13 @@
 
+0.6.0 / 2012-06-25 
+==================
+
+  * remove engine restriction
+  * [fix] Changed require('sys') to require('util') for compatibility with node v0.8
+  * require('util') instead of require('sys')
+  * Refactor tests to not use require.paths
+  * Typechange (from a symlink to a file).
+
 0.5.1 / 2011-03-30 
 ==================
 
