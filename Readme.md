@@ -1,4 +1,3 @@
-
 # Haml.js
 
   High performance JavaScript [Haml](http://haml-lang.com) implementation for [nodejs](http://nodejs.org)
@@ -16,7 +15,7 @@
 
  To use with [Express](http://expressjs.com) and the .haml extension, simply register the engine:
  
-     app.register('.haml', require('hamljs'));
+     app.engine('.haml', require('hamljs').renderFile);
 
 ## About
 
