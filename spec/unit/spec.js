@@ -89,8 +89,18 @@ describe 'haml'
       assert('tag.simple', { cache: true, filename: 'tag.simple.haml' })
     end
     
-    it 'should support blank lines'
-      assert('newlines')
+    describe '\n'
+      it 'should support blank lines'
+        assert('newlines')
+      end
+
+      it 'should support blank lines within tags'
+        assert('newlines.within-tags')
+      end
+
+      it 'should support blank lines filled in whitespace'
+        assert('newlines.whitespace')
+      end
     end
     
     describe '.class'
