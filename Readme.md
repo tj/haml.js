@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/visionmedia/haml.js.png)](http://travis-ci.org/visionmedia/haml.js)
 # Haml.js
 
   High performance JavaScript [Haml](http://haml-lang.com) implementation for [nodejs](http://nodejs.org)
