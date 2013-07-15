@@ -7,5 +7,8 @@
     "url": "git://github.com/visionmedia/haml.js.git"
   },
   "author": "TJ Holowaychuk <tj@vision-media.ca> (http://tjholowaychuk.com)",
-  "main": "lib/haml.js"
+  "main": "lib/haml.js",
+  "dependencies": {
+    "syntax-error": "0.0.1"
+  }
 }
