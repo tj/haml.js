@@ -183,6 +183,19 @@ describe 'haml'
       it 'should allow booleans'
         assert('tag.attrs.bools')
       end
+
+      it 'should report syntax error'
+        try {
+          assert('tag.attrs.badsyntax')
+          fail('no syntax error reported')
+        } catch (err) {
+          expected = fixture('tag.attrs.badsyntax.html').trim()
+          if (err.message === expected)
+            pass()
+          else
+            fail('got:\n' + err.message + '\n\nexpected:\n' + expected)
+         }
+      end
     end
     
     describe '!!!'
