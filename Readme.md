@@ -90,7 +90,7 @@ You may chain id and classes in any order:
     
 html:
 
-    <div id="first" class="article summary">context</div>
+    <div id="first" class="article summary">content</div>
     
 ## Attributes
 
