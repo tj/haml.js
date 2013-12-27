@@ -271,6 +271,16 @@ describe('haml', function () {
       });
     });
 
+    describe('#{}', function () {
+      it('should interpolate strings', function () {
+        assert('string.interpolation', { locals: { message: 'it works!' } });
+      });
+
+      it('should interpolate strings (complex)', function () {
+        assert('string.complex-interpolation', { locals: { message: 'it works!' } });
+      });
+    });
+
     describe('-#', function () {
       it('should become a silent comment', function () {
         assert('comment');
