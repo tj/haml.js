@@ -150,6 +150,10 @@ describe('haml', function () {
         assert('tag.classes');
       });
 
+      it('should work with both .class and class=\'another-class\'', function () {
+        assert('tag.class.attribute');
+      });
+
       it('should support self-closing tags', function () {
         assert('tag.self-close');
       });
