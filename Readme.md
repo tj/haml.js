@@ -221,6 +221,17 @@ extended simply by adding values to to _haml.doctypes_.
     'basic': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">',
     'mobile': '<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">'
 
+## String interpolation
+
+    %div Hello #{world}
+
+with locals:
+
+    { world: "World!" }
+
+html:
+
+    <div>Hello World!</div>
 
 ## :cdata
 
