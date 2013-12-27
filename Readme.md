@@ -1,7 +1,7 @@
 # Haml.js
 
   High performance JavaScript [Haml](http://haml-lang.com) implementation for [nodejs](http://nodejs.org)
-  
+
   For a higher quality implementation you may want to look at my [Jade](http://jade-lang.com) template engine,
   however the syntax is slightly different. Jade's engine may be back-ported to haml.js in the future.
 
@@ -14,14 +14,14 @@
 ## Express
 
  To use with [Express](http://expressjs.com) and the .haml extension, simply register the engine:
- 
+
      app.engine('.haml', require('hamljs').renderFile);
 
 ## About
 
   Benchmarks rendering the same 21 line haml file located at _benchmarks/page.haml_,
   shows that this library is nearly **65%** or **3 times** faster than haml-js.
-  
+
       Winner: haml.js
       Compared with next highest (haml-js), it's:
       65.39% faster
@@ -32,20 +32,20 @@
   implementation as well as possible. There are no magic "plugins" like
   found in other JavaScript haml implementations, for example the following
   will work just fine:
-  
+
     - if (items)
       %ul
         - for (var i = 0; i < items.length; ++i)
           %li= items[i]
-  
+
   Iteration is the one exception to these magical plugins,
   since this is **ugly** in JavaScript, you may also:
-  
+
     - if (items)
       %ul
         - each item in items
           %li= item
-          
+
 ## Tags
 
     %div text
@@ -53,49 +53,49 @@
 html:
 
     <div>text</div>
-    
+
 ## Classes
 
     %div.article.first
       article text here
       and here
-      
+
 html:
 
     <div class="article first">
       article text here and here
     </div>
-    
+
 ## Div Class Shortcut
 
     .comment hey
-    
+
 html:
 
     <div class="comment">hey</div>
-    
+
 ## Div Id Shortcut
 
     #article-1 foo
-    
+
 html:
 
     <div id="article-1">foo</div>
-    
+
 ## Combining Ids and Classes
 
 You may chain id and classes in any order:
 
     .article#first.summary content
-    
+
 html:
 
     <div id="first" class="article summary">content</div>
-    
+
 ## Attributes
 
     %a{ href: 'http://google.com', title: 'Google It' } Google
-    
+
 html:
 
     <a href="http://google.com" title="Google It">Google</a>
@@ -112,25 +112,25 @@ you should:
 which will render:
 
     <label for="something"></label>
-    
+
 ## Boolean Attributes
 
     %input{ type: 'checkbox', checked: true }
-    
+
 html:
 
     <input type="checkbox" checked="checked"/>
-    
+
 ## Combining Attributes, Ids, and Classes
-    
+
 Wemay also contain id and classes before or after:
 
     %a.button{ href: 'http://google.com', title: 'Google It' }.first Google
-    
+
 html:
 
     <a href="http://google.com" title="Google It" class="button first">Google</a>
-    
+
 ## Code
 
 Code starting with a hyphen will be executed but
@@ -140,33 +140,33 @@ will be buffered:
     - a = 1
     - b = 2
     = a + b
-    
+
 html:
 
     3
-    
+
 HTML buffered with equals sign will **always** be escaped:
 
     = "<br/>"
-    
+
 html:
-   
+
     &lt;br/&gt;
-    
+
 To prevent escaping of HTML entities we can use _!=_:
 
     != "<br/>"
-    
+
 html:
 
     <br/>
-    
+
 ## Iteration
 
     %ul
       - each item in items
         %li= item
-        
+
 html:
 
     <ul>
@@ -174,7 +174,7 @@ html:
       <li>two</li>
       <li>three</li>
     </ul>
-    
+
 If you require the key or index of the object
 or array during iteration simple append a comma
 following another id:
@@ -182,7 +182,7 @@ following another id:
     %ul
       - each item, index in items
         %li= item + '(' + index + ')'
-        
+
 html:
 
     <ul>
@@ -190,21 +190,21 @@ html:
       <li>two(1)</li>
       <li>three(2)</li>
     </ul>
-    
+
 ## Doctypes
 
 Defaults to transitional:
-    
+
     !!!
-    
+
 html:
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    
+
 Optionally pass a supported doctype name:
 
     !!! strict
-    
+
 html:
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -227,13 +227,13 @@ extended simply by adding values to to _haml.doctypes_.
     %script
       :cdata
         foo
-        
+
 html:
 
     <script><![CDATA[
     foo
     ]]></script>
-    
+
 ## :javascript
 
     %head
@@ -241,7 +241,7 @@ html:
         if (foo)
           if (bar)
             alert('baz')
-      
+
 html:
 
     <head>
@@ -253,12 +253,12 @@ html:
       //]]>
       </script>
     </head>
-    
+
 ## Extending Haml
 
 ### Adding Filters
 
-    var haml = require('haml')
+    var haml = require('hamljs')
     haml.filters.my_filter = function(str) {
       return doSomethingWith(str)
     }
@@ -273,13 +273,13 @@ utilize it within our Haml templates as shown below:
 
 ### Adding Doctypes
 
-    var haml = require('haml')
+    var haml = require('hamljs')
     haml.doctypes.foo = '<!DOCTYPE ... >'
-    
+
 Will now allow you to:
     !!! foo
-    
-## License 
+
+## License
 
 (The MIT License)
 
