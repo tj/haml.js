@@ -226,6 +226,10 @@ describe('haml', function () {
         assert('code.if');
       });
 
+      it('should work with if / else statements', function () {
+        assert('code.if.else');
+      });
+
       it('should work when nested', function () {
         assert('code.nested');
       });
