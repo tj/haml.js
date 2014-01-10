@@ -13,6 +13,8 @@
   "main": "lib/haml.js",
   "devDependencies": {
     "should": "~2.1.1",
-    "mocha": "~1.16.2"
+    "mocha": "~1.16.2",
+    "grunt-urequire": "~0.6.0",
+    "grunt": "~0.4.2"
   }
 }
