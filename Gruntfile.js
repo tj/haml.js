@@ -7,8 +7,8 @@ module.exports = function(grunt) {
       dist: {
         path: "lib",
         main: "haml",
-        dstPath: "haml.js",
-        template: "combined"
+        dstPath: ".",
+        template: "AMD"
       }
     }
   });
