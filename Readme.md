@@ -5,7 +5,7 @@
   For a higher quality implementation you may want to look at my [Jade](http://jade-lang.com) template engine,
   however the syntax is slightly different. Jade's engine may be back-ported to haml.js in the future.
   
-  [![Build Status](https://travis-ci.org/visionmedia/jade.png?branch=master)](https://travis-ci.org/visionmedia/jade)
+  [![Build Status](https://travis-ci.org/visionmedia/haml.js.png?branch=master)](https://travis-ci.org/visionmedia/haml.js)
 
 ## Installation
 
