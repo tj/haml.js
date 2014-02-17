@@ -1,10 +1,17 @@
+0.6.2 / 2014-02-17
+==================
 
-0.6.1 / 2012-07-26 
+  * add support for string interpolation
+  * add amd support
+  * add `.renderFile`
+  * ability to use both class tag and class attribute at the same time
+
+0.6.1 / 2012-07-26
 ==================
 
   * fix global leak of Parser
 
-0.6.0 / 2012-06-25 
+0.6.0 / 2012-06-25
 ==================
 
   * remove engine restriction
@@ -13,12 +20,12 @@
   * Refactor tests to not use require.paths
   * Typechange (from a symlink to a file).
 
-0.5.1 / 2011-03-30 
+0.5.1 / 2011-03-30
 ==================
 
   * Exposing Parser for extension [Derek Hammer]
 
-0.5.0 / 2011-03-04 
+0.5.0 / 2011-03-04
 ==================
 
   * Added `.compile()` for Express 2.0

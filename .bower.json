@@ -1,8 +1,8 @@
 {
   "name": "haml.js",
   "homepage": "https://github.com/visionmedia/haml.js",
-  "version": "0.6.1",
-  "_release": "0.6.1",
+  "version": "0.6.2",
+  "_release": "0.6.2",
   "_resolution": {
     "type": "version",
     "tag": "0.6.2",
