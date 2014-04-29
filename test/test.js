@@ -207,6 +207,10 @@ describe('haml', function () {
       it('should allow booleans', function () {
         assert('tag.attrs.bools');
       });
+
+      it('should allow brackets between quote marks', function () {
+        assert('tag.attrs.brackets');
+      });
     });
 
     describe('!!!', function () {
