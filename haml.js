@@ -410,7 +410,8 @@ HAML.render = function (str, options) {
   }.call(options.context);
 };
 HAML.renderFile = function (filename, encoding, options, callback) {
-  var fs = require("fs");
+  var r = require;
+  var fs = r("fs");
   options = options || {};
   options.filename = options.filename || filename;
   options.cache = options.hasOwnProperty("cache") ? options.cache : true;
