@@ -152,7 +152,7 @@ Parser.prototype = {
   },
   get text() {
     var text = this.advance.val.trim();
-    text = text.replace(/#\{(.*)\}/, "\" + $1 + \"");
+    text = text.replace(/#\{(.*?)\}/g, "\" + $1 + \"");
     this.buffer(text);
   },
   get block() {

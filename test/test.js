@@ -300,6 +300,10 @@ describe('haml', function () {
       it('should interpolate strings (complex)', function () {
         assert('string.complex-interpolation', { locals: { message: 'it works!' } });
       });
+
+      it('should allow multiple interpolations per string', function () {
+        assert('string.multiple-interpolation', { locals: { message: 'hello', stuff: 'world' } });
+      });
     });
 
     describe('-#', function () {
