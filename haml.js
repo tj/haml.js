@@ -68,7 +68,7 @@ var rules = {
     code: /^\-([^\n]+)/,
     outputCode: /^!=([^\n]+)/,
     escapeCode: /^=([^\n]+)/,
-    attrs: /^\{(.*?)\}/,
+    attrs: /^\{(.*?['"]?.*)\}/,
     tag: /^%([-a-zA-Z][-a-zA-Z0-9:]*)/,
     class: /^\.([\w\-]+)/,
     id: /^\#([\w\-]+)/,
