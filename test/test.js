@@ -29,7 +29,6 @@ describe('haml', function () {
         html = html.trim()
         var expected = fs.readFileSync(__dirname + '/fixtures/class.html').toString()
 
-        console.log(JSON.stringify(html), JSON.stringify(expected))
         html.should.equal(expected)
 
         done()
