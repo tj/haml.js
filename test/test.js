@@ -218,6 +218,10 @@ describe('haml', function () {
       it('should allow brackets between quote marks', function () {
         assert('tag.attrs.brackets');
       });
+
+      it('should allow single bracket between quote marks', function () {
+        assert('tag.attrs.brackets.single');
+      });
     });
 
     describe('!!!', function () {
