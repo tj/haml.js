@@ -225,7 +225,7 @@ extended simply by adding values to to _haml.doctypes_.
 
 ## String interpolation
 
-    %div Hello #{world}
+    %div Hello #{world}#
 
 with locals:
 

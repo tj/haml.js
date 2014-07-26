@@ -152,6 +152,14 @@ describe('haml', function () {
       it('should allow empty tags', function () {
         assert('tag.empty');
       });
+
+      it('should work with brackets in the text', function () {
+        assert('tag.text.brackets');
+      });
+
+      it('should work with brackets in a block', function () {
+        assert('tag.text.block.brackets');
+      });
     });
 
     describe('%tag.class', function () {
@@ -209,6 +217,10 @@ describe('haml', function () {
 
       it('should allow brackets between quote marks', function () {
         assert('tag.attrs.brackets');
+      });
+
+      it('should allow single bracket between quote marks', function () {
+        assert('tag.attrs.brackets.single');
       });
     });
 
