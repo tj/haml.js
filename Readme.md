@@ -272,17 +272,19 @@ html:
 ### Adding Filters
 
     var haml = require('hamljs')
-    haml.filters.my_filter = function(str) {
-      return doSomethingWith(str)
+    haml.filters.my_filter = function(str, buffer) {
+      buffer.push(doSomething(str))
     }
 
 by registering the filter function _my_filter_ we can now
 utilize it within our Haml templates as shown below:
+```haml
     %p
       :my_filter
         some text
         here yay
         whoop awesome
+```
 
 ### Adding Doctypes
 
