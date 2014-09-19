@@ -59,6 +59,10 @@ describe('haml', function () {
       };
     });
 
+    it('should escape text in templates', function() {
+      assert('text.escape');
+    });
+
     it('should allow passing of a context object', function () {
       assert('context', { context: 'yay' });
     });
