@@ -1,6 +1,6 @@
 # Haml.js
 
-  High performance JavaScript [Haml](http://haml-lang.com) implementation for [nodejs](http://nodejs.org)
+  High performance JavaScript [Haml](https://www.npmjs.com/package/haml) implementation for [nodejs](http://nodejs.org)
 
   For a higher quality implementation you may want to look at my [Jade](http://jade-lang.com) template engine,
   however the syntax is slightly different. Jade's engine may be back-ported to haml.js in the future.
